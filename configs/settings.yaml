@@ -1,0 +1,21 @@
+# Qdrant
+qdrant:
+  collection_name: attack_chunks
+  distance: cosine
+  top_k: 12
+  max_approved: 4
+  min_score: 0.0
+
+# Chunking
+chunking:
+  chunk_size: 1200
+  overlap: 150
+
+# Pipeline (for Layer 1)
+pipeline:
+  max_retry: 1
+  min_citations: 2
+
+# Embeddings / model (embed_dim depends on embedding model)
+models:
+  embed_dim: 1536

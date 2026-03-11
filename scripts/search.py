@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 CLI to run and verify retrieval: takes a query, prints top results with score, chunk_id, snippet.
-Usage: python scripts/search.py "your query"
+Usage: python scripts/search.py 
 """
 
 import sys

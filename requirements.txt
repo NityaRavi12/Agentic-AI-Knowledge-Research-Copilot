@@ -1,0 +1,19 @@
+# Core
+qdrant-client>=1.17
+pyyaml>=6.0
+python-dotenv>=1.0
+pydantic>=2.0
+ 
+# Chat — Groq free tier
+groq>=0.9
+ 
+# Embeddings — local, no API key needed
+sentence-transformers>=3.0
+ 
+# Agentic pipeline
+langgraph>=0.2
+ 
+# For later: FastAPI, Streamlit
+# fastapi
+# uvicorn
+# streamlit

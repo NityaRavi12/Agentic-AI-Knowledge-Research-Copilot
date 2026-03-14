@@ -1,0 +1,24 @@
+qdrant:
+  collection_name: "attack_chunks"
+  distance: "cosine"
+  top_k: 12
+ 
+chunking:
+  chunk_size: 1200
+  overlap: 150
+ 
+models:
+  embed_dim: 384                        # all-MiniLM-L6-v2 output dimension
+  chat_model: "llama-3.3-70b-versatile" # Groq model
+  embed_model: "all-MiniLM-L6-v2"      # local sentence-transformers model
+ 
+layer1:
+  min_evidence_score: 0.40   # MiniLM scores are lower than OpenAI — adjusted threshold
+  min_evidence_chunks: 2
+  max_retries: 1
+  temperature: 0.1
+ 
+layer2:
+  max_sub_questions: 5
+  temperature: 0.2
+ 

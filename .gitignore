@@ -21,3 +21,4 @@ env/
 
 # Optional: uncomment if you don't want to push the large STIX file
 # data/raw/*.json
+data/raw/*.json

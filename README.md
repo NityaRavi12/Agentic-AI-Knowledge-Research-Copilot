@@ -1,4 +1,4 @@
-### \# Agentic AI Knowledge \& Research Copilot
+\# Agentic AI Knowledge \& Research Copilot
 
 
 

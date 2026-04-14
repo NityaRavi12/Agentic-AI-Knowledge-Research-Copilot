@@ -1,0 +1,79 @@
+[
+  {
+    "id": "q8",
+    "question": "How would an attacker move laterally through a corporate network without being detected?",
+    "ground_truth": "An attacker would combine lateral movement techniques such as Pass the Hash, use of legitimate remote services like RDP and SMB, and living-off-the-land binaries. They would avoid detection by clearing logs, using encrypted channels, and blending in with normal network traffic.",
+    "expected_citations": [
+      "T1550",
+      "T1021",
+      "T1562",
+      "T1036"
+    ],
+    "result": {
+      "report": "## Executive Summary\nAn attacker can move laterally through a corporate network without being detected by utilizing various tactics and techniques outlined in the MITRE ATT&CK framework. The Lateral Movement tactic [TA0008] can be achieved via techniques such as [T1557] and [T1558.004], enabling access to valid accounts for further movement. Additionally, techniques like [T1210] Exploitation of Remote Services and [T1046] Network Service Discovery can facilitate lateral movement. The use of remote services, such as SSH [T1021/004] and VNC [T1021/005], can also enable adversaries to access remote hosts and perform actions as the logged-on user.\n\n## Findings\n* The Lateral Movement tactic [TA0008] is associated with techniques such as [T1557] and [T1558.004], which enable access to valid accounts for further movement [T1078].\n* The Exploitation of Remote Services technique [T1210] can be used to gain unauthorized access to internal systems, and is often supported by Network Service Discovery [T1046].\n* Remote Services [T1021] can facilitate lateral movement, with sub-techniques including the use of SSH [T1021/004] and VNC [T1021/005].\n* Detection of T1021 Remote Services requires data sources such as network traffic logs capturing remote access protocols like SSH, RDP, and VNC, as well as login event logs from servers and workstations.\n\n## Recommendations\n* Defenders should monitor network traffic logs for remote access protocols like SSH, RDP, and VNC to detect potential lateral movement [T1021].\n* Implementing robust network service discovery and vulnerability management can help prevent Exploitation of Remote Services [T1210].\n* Limiting the use of valid accounts for lateral movement [T1557] and implementing account monitoring can help detect and prevent lateral movement.\n* Utilizing threat intelligence and anomaly detection can help identify potential adversaries using remote access protocols to log into services [T1046].\n\n## Assumptions and Gaps\nThe sub-question regarding the tactics used for lateral movement in the MITRE ATT&CK framework had a confidence level of 0.75, indicating some uncertainty in the findings. Additionally, there were no citations provided for the sub-question regarding the data sources required to detect T1021 Remote Services.\n\n## Confidence\n0.81",
+      "subquestions": [
+        "What tactics are used for lateral movement in the MITRE ATT&CK framework?",
+        "What techniques are associated with the Lateral Movement tactic?",
+        "What sub-techniques of T1021 exist to facilitate lateral movement?",
+        "What data sources are required to detect T1021, Remote Services?"
+      ],
+      "confidence": 0.8,
+      "subresults": [
+        {
+          "question": "What tactics are used for lateral movement in the MITRE ATT&CK framework?",
+          "answer": "Based on the provided evidence, the tactics used for lateral movement in the MITRE ATT&CK framework include [Lateral Movement](https://attack.mitre.org/tactics/TA0008) itself. This can be achieved via techniques such as [T1557] and [T1558.004], which enable access to [Valid Accounts](https://attack.mitre.org/techniques/T1078) for further movement. Additionally, [T1558.004] may also enable [Persistence](https://attack.mitre.org/tactics/TA0003) and [Privilege Escalation](https://attack.mitre.org/tactics/TA0004), which can contribute to lateral movement.",
+          "citations": [
+            "T1557",
+            "T1558.004"
+          ],
+          "confidence": 0.75
+        },
+        {
+          "question": "What techniques are associated with the Lateral Movement tactic?",
+          "answer": "The Lateral Movement tactic is associated with the [T1210] Exploitation of Remote Services technique, which involves exploiting remote services to gain unauthorized access to internal systems. Additionally, [T1046] Network Service Discovery may be used to support this technique by identifying vulnerable remote systems.",
+          "citations": [
+            "T1210",
+            "T1046"
+          ],
+          "confidence": 0.8
+        },
+        {
+          "question": "What sub-techniques of T1021 exist to facilitate lateral movement?",
+          "answer": "To facilitate lateral movement, the sub-techniques of [T1021] Remote Services that exist are [T1021/004] using SSH and [T1021/005] using VNC. These sub-techniques allow adversaries to access remote hosts and perform actions as the logged-on user, enabling lateral movement within a network.",
+          "citations": [
+            "T1021"
+          ],
+          "confidence": 0.85
+        },
+        {
+          "question": "What data sources are required to detect T1021, Remote Services?",
+          "answer": "To detect T1021 Remote Services, data sources such as network traffic logs capturing remote access protocols like SSH, RDP, and VNC, as well as login event logs from servers and workstations, are required. These logs can help identify potential adversaries using remote access protocols to log into services.",
+          "citations": [],
+          "confidence": 0.8
+        }
+      ],
+      "error": null
+    },
+    "time_s": 67.05
+  },
+  {
+    "id": "q9",
+    "question": "What techniques do APT groups use for initial access and persistence?",
+    "ground_truth": "APT groups use spearphishing, exploitation of public-facing applications, and supply chain compromise for initial access. For persistence they use scheduled tasks, registry run keys, and implanted backdoors.",
+    "expected_citations": [
+      "T1566",
+      "T1190",
+      "T1195",
+      "T1053",
+      "T1547"
+    ],
+    "result": {
+      "report": "",
+      "subquestions": [],
+      "confidence": 0.0,
+      "subresults": [],
+      "error": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kp6p1b79eytbz4r0wd1pax5f` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99939, Requested 823. Please try again in 10m58.368s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}"
+    },
+    "time_s": 35.88
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "agentic": {
+    "faithfulness": 0.7321,
+    "answer_relevancy": 0.7159,
+    "context_precision": 0.4792,
+    "context_recall": 0.8297,
+    "citation_precision": 0.4167,
+    "citation_recall": 0.6111,
+    "avg_confidence": 0.8683,
+    "n_evaluated": 6,
+    "note": "Computed with local all-MiniLM-L6-v2 embeddings (cosine similarity proxies). No API calls used."
+  },
+  "baseline": {
+    "faithfulness": 0.725,
+    "answer_relevancy": 0.7377,
+    "context_precision": 0.4647,
+    "context_recall": 0.8207,
+    "citation_precision": 0.4361,
+    "citation_recall": 0.6111,
+    "avg_confidence": null,
+    "n_evaluated": 6,
+    "note": "Computed with local all-MiniLM-L6-v2 embeddings (cosine similarity proxies). No API calls used."
+  }
+}

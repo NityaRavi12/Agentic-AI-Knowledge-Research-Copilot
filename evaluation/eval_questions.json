@@ -1,0 +1,65 @@
+[
+  {
+    "id": "q1",
+    "question": "How do adversaries use PowerShell for execution?",
+    "ground_truth": "Adversaries abuse PowerShell to execute commands and scripts. PowerShell can be used to run encoded commands, download and execute payloads, and interact with the Windows API. It is identified as technique T1059.001 under Command and Scripting Interpreter.",
+    "expected_citations": ["T1059", "T1059.001"],
+    "layer": 1
+  },
+  {
+    "id": "q2",
+    "question": "What is credential dumping?",
+    "ground_truth": "Credential dumping refers to techniques used by adversaries to obtain account login and password information from the operating system and software. This includes dumping credentials from memory, registry hives, and files. It is covered under T1003 OS Credential Dumping.",
+    "expected_citations": ["T1003"],
+    "layer": 1
+  },
+  {
+    "id": "q3",
+    "question": "How do attackers maintain persistence on Windows?",
+    "ground_truth": "Attackers maintain persistence on Windows using techniques such as registry run keys, scheduled tasks, startup folder items, and service creation. These allow malicious code to survive reboots and re-execute automatically.",
+    "expected_citations": ["T1547", "T1053", "T1543"],
+    "layer": 1
+  },
+  {
+    "id": "q4",
+    "question": "What techniques are used for lateral movement in a network?",
+    "ground_truth": "Lateral movement techniques include Pass the Hash, Pass the Ticket, Remote Services such as SMB and RDP, and exploitation of remote services. Adversaries use these to move through a network after initial access.",
+    "expected_citations": ["T1550", "T1021", "T1210"],
+    "layer": 1
+  },
+  {
+    "id": "q5",
+    "question": "How do adversaries evade detection on a compromised system?",
+    "ground_truth": "Adversaries use defense evasion techniques such as disabling security tools, obfuscating malicious code, masquerading as legitimate processes, and clearing logs to avoid detection.",
+    "expected_citations": ["T1562", "T1027", "T1036"],
+    "layer": 1
+  },
+  {
+    "id": "q6",
+    "question": "What is T1059?",
+    "ground_truth": "T1059 is the Command and Scripting Interpreter technique. Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries. These interfaces and languages provide ways of interacting with computer systems.",
+    "expected_citations": ["T1059"],
+    "layer": 1
+  },
+  {
+    "id": "q7",
+    "question": "What is T9999?",
+    "ground_truth": "INSUFFICIENT EVIDENCE",
+    "expected_citations": [],
+    "layer": 1
+  },
+  {
+    "id": "q8",
+    "question": "How would an attacker move laterally through a corporate network without being detected?",
+    "ground_truth": "An attacker would combine lateral movement techniques such as Pass the Hash, use of legitimate remote services like RDP and SMB, and living-off-the-land binaries. They would avoid detection by clearing logs, using encrypted channels, and blending in with normal network traffic.",
+    "expected_citations": ["T1550", "T1021", "T1562", "T1036"],
+    "layer": 2
+  },
+  {
+    "id": "q9",
+    "question": "What techniques do APT groups use for initial access and persistence?",
+    "ground_truth": "APT groups use spearphishing, exploitation of public-facing applications, and supply chain compromise for initial access. For persistence they use scheduled tasks, registry run keys, and implanted backdoors.",
+    "expected_citations": ["T1566", "T1190", "T1195", "T1053", "T1547"],
+    "layer": 2
+  }
+]

@@ -38,10 +38,13 @@ html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 .title-block p { color: #a8c8e8; font-size: 0.95rem; margin: 0; }
 .answer-box {
     background: #f8f9fa;
+    color: #111827;
     border-left: 4px solid #2c5364;
     border-radius: 6px;
     padding: 1rem 1.2rem;
     margin: 0.5rem 0;
+    white-space: pre-wrap;
+    line-height: 1.6;
 }
 .citation-pill {
     display: inline-block;
@@ -68,7 +71,11 @@ with st.sidebar:
     st.markdown("### 🛡️ ATT&CK Copilot")
     st.markdown("---")
     st.markdown("**Pipeline Agents**")
-    st.markdown("- 🔍 **Planner** — query distillation\n- 🧪 **Evaluator** — CRAG filter\n- ✍️ **Answerer** — cited answer\n- 🔎 **Reflector** — Self-RAG check\n- 🔄 **Retry** — auto-retry")
+    st.markdown("- 🔍 **Retriever** — semantic evidence search\n"
+    "- 🧪 **Retrieval Evaluator** — relevance + sufficiency check\n"
+    "- ✍️ **Answerer** — grounded cited answer\n"
+    "- 🔎 **Answer Evaluator** — grounding + completeness check\n"
+    "- 🔄 **Revision Loop** — retry/revise when evidence is weak")
     st.markdown("---")
     st.markdown("**Data Source**")
     st.markdown("[MITRE ATT&CK Enterprise](https://attack.mitre.org/)")
